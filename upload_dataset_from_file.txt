@@ -1,0 +1,7 @@
+If you want to create a datasets.Dataset from local CSV, JSON, text or pandas files instead of a community provided dataset, you can use one of the csv, json, text or pandas builder. They all accept a variety of file paths as inputs: a path to a single file, a list of paths to files or a dict of paths to files for each split. Here are some examples to load from CSV files:
+
+>>> from datasets import load_dataset
+>>> dataset = load_dataset('csv', data_files='my_file.csv')
+>>> dataset = load_dataset('csv', data_files=['my_file_1.csv', 'my_file_2.csv', 'my_file_3.csv'])
+>>> dataset = load_dataset('csv', data_files={'train': ['my_train_file_1.csv', 'my_train_file_2.csv'],
+>>>                                           'test': 'my_test_file.csv'})
